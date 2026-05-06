@@ -390,11 +390,14 @@
             color: transparent;
             /* НЕОНОВОЕ СВЕЧЕНИЕ */
             text-shadow: 0 0 5px #fff, 0 0 10px #ff00de, 0 0 20px #ff00de, 0 0 30px #ff00de;
+            /* ПЛАВНОЕ ДВИЖЕНИЕ */
+            transition: top 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1), left 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1);
         }
         .moving-close-btn {
             position: absolute;
             z-index: 2100;
             cursor: pointer;
+            transition: top 0.3s ease-out, left 0.3s ease-out;
         }
         .second-img {
             position: absolute;
@@ -655,8 +658,9 @@
             const y = Math.random() * maxY;
             flyingElement.style.top = y + 'px';
             flyingElement.style.left = x + 'px';
+            // Убираем transform, чтобы transition работал корректно
             flyingElement.style.transform = 'none';
-        }, 100);
+        }, 1300);
     }
 
     function startMovingCloseButton() {
@@ -682,7 +686,6 @@
             const secondImg = document.getElementById('secondImg');
             if (secondImg) secondImg.style.display = 'none';
             overlay.style.display = 'none';
-            // выходим из полноэкранного режима при закрытии
             if (document.exitFullscreen) document.exitFullscreen();
         };
         overlay.appendChild(movingButton);
@@ -695,7 +698,7 @@
             const y = Math.max(10, Math.random() * maxY);
             movingButton.style.top = y + 'px';
             movingButton.style.left = x + 'px';
-        }, 300);
+        }, 500);
     }
 
     function showSecret() {
@@ -717,7 +720,6 @@
         
         overlay.style.display = 'flex';
         
-        // ВКЛЮЧАЕМ ПОЛНОЭКРАННЫЙ РЕЖИМ (F11)
         const elem = document.documentElement;
         if (elem.requestFullscreen) {
             elem.requestFullscreen().catch(err => {
@@ -725,10 +727,11 @@
             });
         }
         
+        // ВТОРАЯ ФОТКА ЧЕРЕЗ 2.3 СЕКУНДЫ
         secondImageTimeout = setTimeout(() => {
             const img2 = document.getElementById('secondImg');
             if (img2) img2.style.display = 'block';
-        }, 5000);
+        }, 2300);
     }
 
     function updateAuthUI() {
