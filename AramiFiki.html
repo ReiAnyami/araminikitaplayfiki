@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Arami Никита Play — трейлер «Человек Молния»</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0a0f1e 0%, #0d1117 100%);
+            color: #eef2ff;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a1f2e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ff2d75;
+            border-radius: 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .header {
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(12px);
+            background: rgba(10, 15, 30, 0.7);
+            border-bottom: 1px solid rgba(255, 45, 117, 0.3);
+            padding: 16px 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ff2d75, #ffb347);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            font-weight: 600;
+        }
+
+        .nav-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: 0.2s;
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: #ff2d75;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 40px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: 0.2s;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(95deg, #ff2d75, #ff6a3d);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 45, 117, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(255, 45, 117, 0.5);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #ff2d75;
+            color: #ff2d75;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 45, 117, 0.1);
+        }
+
+        .btn-danger {
+            background: #aa2e4e;
+            color: white;
+            box-shadow: 0 0 10px rgba(255,0,85,0.3);
+        }
+
+        .hero {
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+
+        .avatar {
+            width: 140px;
+            height: 140px;
+            background: #1e2538;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 35px -10px rgba(255, 45, 117, 0.4);
+        }
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff, #ffb347);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 16px;
+        }
+
+        .hero .tag {
+            display: inline-block;
+            background: rgba(255, 45, 117, 0.2);
+            backdrop-filter: blur(4px);
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255, 45, 117, 0.5);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #b9c3d4;
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        section {
+            padding: 70px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 48px;
+            text-align: center;
+        }
+        .section-title span {
+            background: linear-gradient(135deg, #ff2d75, #ffb347);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 28px;
+        }
+
+        .card {
+            background: rgba(20, 25, 40, 0.6);
+            backdrop-filter: blur(8px);
+            border-radius: 28px;
+            padding: 28px;
+            border: 1px solid rgba(255,45,117,0.2);
+            transition: 0.25s;
+        }
+        .card:hover {
+            border-color: rgba(255,45,117,0.6);
+            transform: translateY(-6px);
+        }
+        .card i {
+            font-size: 40px;
+            background: linear-gradient(135deg, #ff2d75, #ffb347);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+        }
+        .card h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+        .card p {
+            color: #b0bbd0;
+            font-size: 15px;
+        }
+        .card-img {
+            width: 100%;
+            border-radius: 20px;
+            margin-bottom: 16px;
+        }
+
+        .trailer-wrapper {
+            background: linear-gradient(135deg, #0b1020, #000000aa);
+            border-radius: 40px;
+            overflow: hidden;
+            border: 1px solid rgba(255,45,117,0.4);
+            box-shadow: 0 25px 40px -15px rgba(0,0,0,0.6);
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            background: #000;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .trailer-caption {
+            padding: 24px 28px;
+            text-align: center;
+            background: rgba(10,12,24,0.7);
+        }
+        .trailer-caption h3 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #fff, #ffb347);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .stream-widget {
+            background: linear-gradient(135deg, #1a1f2e, #0f1420);
+            border-radius: 32px;
+            padding: 32px;
+            text-align: center;
+            border: 1px solid #ff2d7544;
+        }
+        .live-badge {
+            background: #ff2d75;
+            display: inline-block;
+            padding: 4px 14px;
+            border-radius: 40px;
+            font-size: 12px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        .stream-btn {
+            background: #ff2d75;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 24px;
+            transition: 0.2s;
+        }
+        .stream-btn:hover {
+            background: #ff4d8c;
+            transform: scale(1.02);
+        }
+
+        .quote-block {
+            text-align: center;
+            font-size: 26px;
+            font-weight: 600;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #ff2d7511, #ffb34711);
+            border-radius: 48px;
+            margin: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 14px;
+            color: #6c7a92;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: #11161f;
+            border-radius: 32px;
+            padding: 32px;
+            width: 320px;
+            border: 1px solid #ff2d75;
+            text-align: center;
+        }
+        .modal-content input {
+            width: 100%;
+            padding: 12px;
+            margin: 12px 0;
+            background: #1e2538;
+            border: 1px solid #2f3a5c;
+            border-radius: 40px;
+            color: white;
+            font-size: 14px;
+        }
+        .secret-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: black;
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: red;
+            font-weight: 900;
+            font-size: 28px;
+            padding: 20px;
+            overflow: hidden;
+        }
+        .secret-overlay img {
+            max-width: 90%;
+            max-height: 50vh;
+            border-radius: 20px;
+            margin: 20px;
+            border: 4px solid red;
+        }
+        .flying-text {
+            position: absolute;
+            font-size: 48px;
+            font-weight: 900;
+            color: #ff0000;
+            text-shadow: 0 0 10px black;
+            white-space: nowrap;
+            z-index: 2100;
+            pointer-events: none;
+            font-family: monospace;
+        }
+        .moving-close-btn {
+            position: absolute;
+            z-index: 2100;
+            cursor: pointer;
+        }
+        .second-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2200;
+            max-width: 90%;
+            max-height: 70vh;
+            border: 6px solid yellow;
+            box-shadow: 0 0 30px red;
+            display: none;
+        }
+        @media (max-width: 700px) {
+            .hero h1 { font-size: 36px; }
+            .section-title { font-size: 28px; }
+            .quote-block { font-size: 20px; }
+            .trailer-caption h3 { font-size: 22px; }
+            .flying-text { font-size: 28px; white-space: normal; width: 90%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <div class="logo">✦ ARAMI NXP ✦</div>
+        <div class="nav-links">
+            <a href="#about">о нём</a>
+            <a href="#trailer">трейлер</a>
+            <a href="#stream">стримы</a>
+            <a href="#fan">фан zone</a>
+        </div>
+        <div id="authArea">
+            <button id="loginBtn" class="btn btn-outline" style="padding: 8px 20px;"><i class="fas fa-user"></i> Войти в аккаунт</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <div class="hero">
+            <div class="avatar">
+                <img src="https://i.imgur.com/WVJLgrQ.jpeg" alt="Arami">
+            </div>
+            <div class="tag">
+                <i class="fas fa-bolt" style="margin-right: 6px;"></i> официально красавчик
+            </div>
+            <h1>Arami Никита Play</h1>
+            <p>Фанат лололошки, снял трейлер «Человек Молния», стример и просто харизма.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary"><i class="fab fa-youtube"></i> YouTube</a>
+                <a href="#" class="btn btn-outline"><i class="fab fa-twitch"></i> Twitch</a>
+            </div>
+        </div>
+
+        <section id="about">
+            <div class="section-title">кто такой <span>Arami?</span></div>
+            <div class="cards-grid">
+                <div class="card">
+                    <img class="card-img" src="https://i.imgur.com/WVJLgrQ.jpeg" alt="Arami">
+                    <i class="fas fa-heart"></i>
+                    <h3>Фанат лололошки 🔥</h3>
+                    <p>С детства в теме, знает лор, пересматривал серии сотни раз.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-video"></i>
+                    <h3>Создаёт трейлеры</h3>
+                    <p>Его трейлер «Человек Молния» — 🔥 Сам смонтировал, сам озвучил.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-microphone-alt"></i>
+                    <h3>Стримит по кайфу</h3>
+                    <p>Прямые эфиры, общение, розыгрыши.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-star"></i>
+                    <h3>Красавчик</h3>
+                    <p>Факт, подтверждённый сообществом.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="trailer">
+            <div class="section-title">главный <span>трейлер года</span> от Arami</div>
+            <div class="trailer-wrapper">
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/dgdgIspnsSo?autoplay=0&rel=0&modestbranding=1" 
+                        title="Человек Молния трейлер"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="trailer-caption">
+                    <h3>⚡ ЧЕЛОВЕК МОЛНИЯ ⚡</h3>
+                    <p style="margin-top: 8px;">Официальный трейлер от Arami Никиты Play.</p>
+                    <div style="margin-top: 16px;">
+                        <span class="live-badge" style="background: #ffb34755; color: white;"><i class="fab fa-youtube"></i> 163 просмотра</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stream">
+            <div class="section-title">live <span>каждый уикенд</span></div>
+            <div class="stream-widget">
+                <div class="live-badge"><i class="fas fa-circle" style="color: #ff2d75; font-size: 10px;"></i> ПРЯМО СЕЙЧАС НЕ СТРИМИТ, НО ЖДЁМ</div>
+                <p style="font-size: 20px; font-weight: 600; margin-bottom: 16px;">«стрим — это тусовка»</p>
+                <button class="stream-btn" onclick="alert('Ближайший стрим в пятницу! Подпишись')"><i class="fab fa-youtube"></i> Включить уведомления</button>
+            </div>
+        </section>
+
+        <section id="fan">
+            <div class="section-title">почему он <span>красавчик?</span></div>
+            <div class="cards-grid">
+                <div class="card">
+                    <i class="fas fa-smile-wink"></i>
+                    <h3>Харизма 3000</h3>
+                    <p>Может разговорить даже стену.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-cut"></i>
+                    <h3>Сам себе режиссёр</h3>
+                    <p>Монтаж трейлера своими руками.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Рост 500% за год</h3>
+                    <p>Фанаты растут как на дрожжах.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Душка и мемас</h3>
+                    <p>«Я красавчик, это факт».</p>
+                </div>
+            </div>
+            <div class="quote-block">
+                «Лололошка — мой вдохновитель, а трейлер "Человек Молния" — это мой огонь»
+                <div style="margin-top: 12px; font-size: 16px; color: #ffb347;">— Arami Никита Play</div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p><i class="fab fa-youtube"></i> <i class="fab fa-twitch"></i> <i class="fab fa-tiktok"></i> <i class="fab fa-discord"></i> — ищи Arami</p>
+        <p style="margin-top: 16px;">© 2026 Фан-сайт Arami Никита Play. Трейлер «Человек Молния» уже на канале. 163 просмотра только начало.</p>
+    </div>
+</footer>
+
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <h2 style="margin-bottom: 20px;">🔐 вход для админа</h2>
+        <input type="text" id="loginUsername" placeholder="логин">
+        <input type="password" id="loginPassword" placeholder="пароль">
+        <button id="doLogin" class="btn btn-primary" style="width:100%; margin-top: 12px;">войти</button>
+        <p style="margin-top: 16px; font-size:12px; color:#888;">регистрация закрыта нахуй</p>
+        <button id="closeModal" class="btn btn-outline" style="margin-top: 16px;">закрыть</button>
+    </div>
+</div>
+
+<div id="secretOverlay" class="secret-overlay">
+    <img id="secretFirstImg" src="https://i.imgur.com/COUK7cy.png" alt="прикол">
+    <img id="secondImg" class="second-img" src="https://i.imgur.com/eJmupCM.jpeg" alt="второе фото">
+</div>
+
+<script>
+    let isAdmin = sessionStorage.getItem('isAdmin') === 'true';
+    let currentAudioCtx = null;
+    let flyingTextInterval = null;
+    let movingButtonInterval = null;
+    let flyingElement = null;
+    let movingButton = null;
+    let secondImageTimeout = null;
+
+    function playScaryMusic() {
+        if (currentAudioCtx) {
+            currentAudioCtx.close();
+        }
+        
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        const ctx = new AudioContext();
+        const gain = ctx.createGain();
+        gain.gain.value = 1.0;
+        gain.connect(ctx.destination);
+        
+        const now = ctx.currentTime;
+        
+        const oscLow = ctx.createOscillator();
+        oscLow.type = 'sine';
+        oscLow.frequency.value = 55;
+        oscLow.connect(gain);
+        oscLow.start();
+        
+        const oscMid = ctx.createOscillator();
+        oscMid.type = 'sawtooth';
+        oscMid.frequency.value = 111;
+        oscMid.connect(gain);
+        oscMid.start();
+        
+        const oscHigh = ctx.createOscillator();
+        oscHigh.type = 'triangle';
+        oscHigh.frequency.value = 880;
+        oscHigh.connect(gain);
+        oscHigh.start();
+        
+        const noise = ctx.createBufferSource();
+        const bufferSize = ctx.sampleRate * 4;
+        const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+        const data = buffer.getChannelData(0);
+        for (let i = 0; i < bufferSize; i++) {
+            data[i] = Math.random() * 0.4;
+        }
+        noise.buffer = buffer;
+        noise.loop = true;
+        noise.connect(gain);
+        noise.start();
+        
+        const screamOsc = ctx.createOscillator();
+        screamOsc.type = 'square';
+        screamOsc.frequency.value = 440;
+        const screamGain = ctx.createGain();
+        screamGain.gain.value = 0;
+        screamOsc.connect(screamGain);
+        screamGain.connect(ctx.destination);
+        screamOsc.start();
+        screamOsc.stop(now + 2.5);
+        screamGain.gain.setValueAtTime(0, now + 1.8);
+        screamGain.gain.linearRampToValueAtTime(0.8, now + 2.0);
+        screamGain.gain.linearRampToValueAtTime(0, now + 2.5);
+        
+        ctx.resume();
+        currentAudioCtx = ctx;
+    }
+
+    function startFlyingText() {
+        const overlay = document.getElementById('secretOverlay');
+        if (flyingElement) flyingElement.remove();
+        
+        flyingElement = document.createElement('div');
+        flyingElement.className = 'flying-text';
+        flyingElement.innerText = 'Привет тебя взломал aether17 и Sad.cc!!!';
+        flyingElement.style.position = 'absolute';
+        flyingElement.style.top = '50%';
+        flyingElement.style.left = '50%';
+        flyingElement.style.transform = 'translate(-50%, -50%)';
+        overlay.appendChild(flyingElement);
+        
+        if (flyingTextInterval) clearInterval(flyingTextInterval);
+        flyingTextInterval = setInterval(() => {
+            if (!flyingElement) return;
+            const maxX = window.innerWidth - flyingElement.offsetWidth - 20;
+            const maxY = window.innerHeight - flyingElement.offsetHeight - 20;
+            const x = Math.random() * maxX;
+            const y = Math.random() * maxY;
+            flyingElement.style.top = y + 'px';
+            flyingElement.style.left = x + 'px';
+            flyingElement.style.transform = 'none';
+        }, 100);
+    }
+
+    function startMovingCloseButton() {
+        const overlay = document.getElementById('secretOverlay');
+        const oldBtn = document.getElementById('movingCloseBtn');
+        if (oldBtn) oldBtn.remove();
+        if (movingButtonInterval) clearInterval(movingButtonInterval);
+        
+        movingButton = document.createElement('button');
+        movingButton.id = 'movingCloseBtn';
+        movingButton.className = 'btn btn-primary moving-close-btn';
+        movingButton.innerText = 'закрыть пиздец';
+        movingButton.style.position = 'absolute';
+        movingButton.style.padding = '12px 28px';
+        movingButton.style.borderRadius = '40px';
+        movingButton.style.cursor = 'pointer';
+        movingButton.onclick = () => {
+            if (currentAudioCtx) { currentAudioCtx.close(); currentAudioCtx = null; }
+            if (secondImageTimeout) { clearTimeout(secondImageTimeout); secondImageTimeout = null; }
+            if (flyingTextInterval) clearInterval(flyingTextInterval);
+            if (movingButtonInterval) clearInterval(movingButtonInterval);
+            if (flyingElement) flyingElement.remove();
+            const secondImg = document.getElementById('secondImg');
+            if (secondImg) secondImg.style.display = 'none';
+            overlay.style.display = 'none';
+        };
+        overlay.appendChild(movingButton);
+        
+        movingButtonInterval = setInterval(() => {
+            if (!movingButton || overlay.style.display !== 'flex') return;
+            const maxX = window.innerWidth - movingButton.offsetWidth - 30;
+            const maxY = window.innerHeight - movingButton.offsetHeight - 30;
+            const x = Math.max(10, Math.random() * maxX);
+            const y = Math.max(10, Math.random() * maxY);
+            movingButton.style.top = y + 'px';
+            movingButton.style.left = x + 'px';
+        }, 300);
+    }
+
+    function showSecret() {
+        const overlay = document.getElementById('secretOverlay');
+        const secondImg = document.getElementById('secondImg');
+        
+        secondImg.style.display = 'none';
+        
+        const oldClose = document.getElementById('movingCloseBtn');
+        if (oldClose) oldClose.remove();
+        if (flyingElement) flyingElement.remove();
+        if (movingButtonInterval) clearInterval(movingButtonInterval);
+        if (flyingTextInterval) clearInterval(flyingTextInterval);
+        if (secondImageTimeout) clearTimeout(secondImageTimeout);
+        
+        playScaryMusic();
+        startFlyingText();
+        startMovingCloseButton();
+        
+        overlay.style.display = 'flex';
+        
+        secondImageTimeout = setTimeout(() => {
+            const img2 = document.getElementById('secondImg');
+            if (img2) img2.style.display = 'block';
+        }, 5000);
+    }
+
+    function updateAuthUI() {
+        const authArea = document.getElementById('authArea');
+        if (isAdmin) {
+            authArea.innerHTML = `<div style="display:flex; gap:10px;"><span style="background:#ff2d7544; padding:6px 14px; border-radius:40px;">👑 ADMIN</span><button id="secretBtn" class="btn btn-danger" style="padding: 6px 18px;">💀 СЕКРЕТ ОТ ARAMI 💀</button><button id="logoutBtn" class="btn btn-outline" style="padding:6px 18px;">выйти</button></div>`;
+            const secretBtn = document.getElementById('secretBtn');
+            if (secretBtn) secretBtn.onclick = showSecret;
+            const logoutBtn = document.getElementById('logoutBtn');
+            if (logoutBtn) logoutBtn.onclick = () => { sessionStorage.removeItem('isAdmin'); location.reload(); };
+        } else {
+            authArea.innerHTML = `<button id="loginBtn" class="btn btn-outline" style="padding: 8px 20px;"><i class="fas fa-user"></i> Войти в аккаунт</button>`;
+            document.getElementById('loginBtn')?.addEventListener('click', showLoginModal);
+        }
+    }
+
+    function showLoginModal() {
+        document.getElementById('loginModal').style.display = 'flex';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        updateAuthUI();
+
+        document.getElementById('doLogin')?.addEventListener('click', () => {
+            const user = document.getElementById('loginUsername').value.trim();
+            const pass = document.getElementById('loginPassword').value.trim();
+            if (user === 'admin' && pass === '12345') {
+                sessionStorage.setItem('isAdmin', 'true');
+                location.reload();
+            } else {
+                alert('доступен только АДМИН: admin / 12345. создавать аккаунты нельзя.');
+            }
+        });
+
+        document.getElementById('closeModal')?.addEventListener('click', () => {
+            document.getElementById('loginModal').style.display = 'none';
+        });
+        window.addEventListener('click', (e) => {
+            const modal = document.getElementById('loginModal');
+            if (e.target === modal) modal.style.display = 'none';
+        });
+    });
+</script>
+</body>
+</html>
