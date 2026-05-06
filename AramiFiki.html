@@ -379,12 +379,17 @@
             position: absolute;
             font-size: 48px;
             font-weight: 900;
-            color: #ff0000;
-            text-shadow: 0 0 10px black;
             white-space: nowrap;
             z-index: 2100;
             pointer-events: none;
             font-family: monospace;
+            /* РАДУЖНЫЙ ГРАДИЕНТ */
+            background: linear-gradient(135deg, red, orange, yellow, green, cyan, blue, violet);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            /* НЕОНОВОЕ СВЕЧЕНИЕ */
+            text-shadow: 0 0 5px #fff, 0 0 10px #ff00de, 0 0 20px #ff00de, 0 0 30px #ff00de;
         }
         .moving-close-btn {
             position: absolute;
@@ -677,6 +682,8 @@
             const secondImg = document.getElementById('secondImg');
             if (secondImg) secondImg.style.display = 'none';
             overlay.style.display = 'none';
+            // выходим из полноэкранного режима при закрытии
+            if (document.exitFullscreen) document.exitFullscreen();
         };
         overlay.appendChild(movingButton);
         
@@ -709,6 +716,14 @@
         startMovingCloseButton();
         
         overlay.style.display = 'flex';
+        
+        // ВКЛЮЧАЕМ ПОЛНОЭКРАННЫЙ РЕЖИМ (F11)
+        const elem = document.documentElement;
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen().catch(err => {
+                console.log(`Ошибка fullscreen: ${err.message}`);
+            });
+        }
         
         secondImageTimeout = setTimeout(() => {
             const img2 = document.getElementById('secondImg');
